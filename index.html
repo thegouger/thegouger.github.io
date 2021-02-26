@@ -1,1 +1,16 @@
-Hello World
+<html>
+<meta charset="UTF-8">
+<script async=false defer>
+    window.addEventListener('DOMContentLoaded', () => {
+        document.getElementById("container").addEventListener("mousemove", function(e) {
+            var x = -(e.pageX + this.offsetLeft) / 20;
+            var y = -(e.pageY + this.offsetTop) / 20;
+
+            this.style.backgroundPosition = x + 'px ' + y + 'px';
+        });
+    });
+</script>
+<body style="margin: 0px">
+<div id="container" style="background: url(coffee_keyboard.jpg) no-repeat; width: 100%; height: 100%; background-size: 110%;" />
+</body>
+</html>
